@@ -1,0 +1,38 @@
+<html>
+ <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ </head>
+ <body>
+  <div id = "change">
+  <!-- Test -->
+  </div>
+  <hr>
+  <div id = "output">
+  </div>
+  <script>
+   var numPics = 0;
+   function pOP(str)
+   {
+        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + str + "<br>";
+   }
+   <!-- pOP("starting script"); -->
+   $.get('/getNumPics', function storeNumPics(str, status)
+   {
+      <!-- pOP("starting numPics Script"); -->
+      if(status == "success")
+      {
+	     <!-- pOP("Success"); -->
+         numPics = parseFloat(str);
+         for(c = numPics; c >= 0; c--)
+         {
+            document.getElementById("change").innerHTML = document.getElementById("change").innerHTML+"<img src = '/static/pic"+c+".jpg'><hr>";
+           <!--  pOP("Displaying Pic"+c); -->
+         }
+      }else{
+        <!-- pOP("There was a problem"); -->
+      }
+   });
+   <!-- pOP("Script Finished") -->
+  </script>
+ </body>
+</html>
