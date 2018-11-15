@@ -18,4 +18,4 @@ The camera is pointed at the perch. When a bird lands on the perch, the weight o
 
 Below is the final product Tom and I presented in class.
 
-![Profile Diagram](pics/pic0.JPG?raw=true "Profile Diagram")
+![Bird Feeder](pics/pic1.JPG?raw=true "Bird Feeder")
